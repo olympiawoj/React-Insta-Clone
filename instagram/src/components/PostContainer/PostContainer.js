@@ -1,5 +1,6 @@
 import React from "react";
 import PostHeader from "./PostHeader";
+import Post from "./Post";
 
 const PostContainer = props => {
   console.log("These are props", props);
@@ -11,7 +12,7 @@ const PostContainer = props => {
             username={item.username}
             thumbnailUrl={item.thumbnailUrl}
           />
-          {/* <Post /> */}
+          <Post imageUrl={item.imageUrl} />
         </div>
       ))}
     </>
