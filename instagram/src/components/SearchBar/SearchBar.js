@@ -9,12 +9,9 @@ import Heart from "../../assets/heart.svg";
 // import Container from "react-bootstrap/Container";
 // import InputGroup from "react-bootstrap/InputGroup";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./SearchBar.css";
 
 const SearchBar = props => {
-  console.log("These are props", props);
   return (
     <div className="searchBar-container">
       <div className="right-logos">
@@ -25,7 +22,6 @@ const SearchBar = props => {
         />
 
         <img src={IGLogo} alt="Instagram logo" className="instagramLogo" />
-        <i class="far fa-user" />
       </div>
 
       <input
@@ -37,7 +33,7 @@ const SearchBar = props => {
 
       <div className="left-logos">
         <img src={Heart} alt="Heart" className="heart" />
-        {/* <FontAwesomeIcon icon="envelope" /> */}
+        <i className="far fa-user" />
       </div>
     </div>
   );

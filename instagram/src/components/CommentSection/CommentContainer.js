@@ -1,17 +1,17 @@
 import React from "react";
 import Comment from "./Comment";
 
-class CommentContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      commentInput: ""
-    };
-  }
-  render() {
-    return (
+const CommentContainer = props => {
+  console.log("These are comment container props", props);
+  return (
+    <>
       <div>
-        <Comment />
+        {props.comments.map(item => (
+          <Comment item={item} />
+        ))}
+      </div>
+
+      <div>
         <form>
           <input
             type="text"
@@ -20,7 +20,8 @@ class CommentContainer extends React.Component {
           />
         </form>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
+
 export default CommentContainer;

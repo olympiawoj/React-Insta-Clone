@@ -4,7 +4,7 @@ import Post from "./Post";
 import CommentContainer from "../CommentSection/CommentContainer";
 
 const PostContainer = props => {
-  console.log("These are props", props);
+  console.log("These are props in PostContainer", props);
   return (
     <>
       {props.data.map(item => (
@@ -14,7 +14,7 @@ const PostContainer = props => {
             thumbnailUrl={item.thumbnailUrl}
           />
           <Post imageUrl={item.imageUrl} />
-          <CommentContainer />
+          <CommentContainer comments={item.comments} />
         </div>
       ))}
     </>
