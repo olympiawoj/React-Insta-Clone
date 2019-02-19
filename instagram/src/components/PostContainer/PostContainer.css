@@ -1,6 +1,7 @@
 .post-container {
   width: 600px;
   height: 922px;
+  margin: 0 auto;
 }
 
 .post-header {
@@ -22,10 +23,6 @@
   margin-left: 15px;
   font-weight: bold;
   font-size: 14px;
-}
-
- {
-  /*These styles are for Post.js*/
 }
 
 .post-img {

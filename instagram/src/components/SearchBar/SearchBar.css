@@ -1,12 +1,18 @@
 .searchBar-container {
-  margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 .right-logos {
-  border: 4px dashed green;
+  width: 33.33%;
 }
+
+.left-logos {
+  width: 33.33%;
+}
+
 .cameraLogo {
   width: 35px;
   height: auto;
@@ -14,7 +20,6 @@
 }
 
 .instagramLogo {
-  border: 2px solid green;
   width: 146px;
   height: auto;
 }

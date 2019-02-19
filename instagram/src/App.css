@@ -1,9 +1,13 @@
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
+.app {
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* display: flex;
+  flex-direction: column; */
+  /* border: 5px dashed orange; */
+  width: 100%;
+  margin: 0 auto;
 }
 
-.searchBar {
+.search-bar {
   border: 1px solid red;
 }
