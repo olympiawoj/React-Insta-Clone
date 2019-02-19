@@ -1,0 +1,30 @@
+.searchBar-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.right-logos {
+  border: 4px dashed green;
+}
+.cameraLogo {
+  width: 35px;
+  height: auto;
+  margin: 15px;
+}
+
+.instagramLogo {
+  border: 2px solid green;
+  width: 146px;
+  height: auto;
+}
+
+.heart {
+  width: 25px;
+  height: auto;
+}
+
+.searchForm {
+  width: 260px;
+  height: 30px;
+}
