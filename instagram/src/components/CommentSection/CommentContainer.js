@@ -12,7 +12,7 @@ const CommentContainer = props => {
       </p>
       <div>
         {props.comments.map(item => (
-          <Comment className="comment" key={props.username} item={item} />
+          <Comment className="comment" key={item.text} item={item} />
         ))}
       </div>
 

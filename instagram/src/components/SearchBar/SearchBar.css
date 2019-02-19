@@ -8,11 +8,11 @@
 }
 
 .right-logos {
-  width: 33.33%;
+  width: 33.3333%;
 }
 
 .left-logos {
-  width: 33.33%;
+  width: 33.3333%;
   /* border: 1px solid red; */
   display: flex;
   justify-content: flex-end;
@@ -40,7 +40,14 @@
   height: auto;
 }
 
+.input-group {
+  width: 33.33%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+}
+
 .searchForm {
   width: 260px;
-  height: 30px;
+  height: 35px;
 }

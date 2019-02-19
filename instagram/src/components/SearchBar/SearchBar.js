@@ -24,12 +24,20 @@ const SearchBar = props => {
         <img src={IGLogo} alt="Instagram logo" className="instagramLogo" />
       </div>
 
-      <input
-        className="searchForm input-group"
-        name=""
-        type="text"
-        placeholder="Search"
-      />
+      <div className="input-group">
+        <div className="input-group-prepend">
+          <span className="input-group-text">
+            <i className="fas fa-search" />
+          </span>
+        </div>
+
+        <input
+          className="searchForm input-group"
+          name=""
+          type="text"
+          placeholder="   Search"
+        />
+      </div>
 
       <div className="left-logos">
         <i className="far fa-circle" />
