@@ -4,7 +4,7 @@ import Comment from "./Comment";
 const CommentContainer = props => {
   console.log("These are comment container props", props);
   return (
-    <>
+    <div className="comment-container">
       <i className="far fa-heart" />
       <i className="far fa-comment" />
       <p>
@@ -12,7 +12,7 @@ const CommentContainer = props => {
       </p>
       <div>
         {props.comments.map(item => (
-          <Comment key={props.username} item={item} />
+          <Comment className="comment" key={props.username} item={item} />
         ))}
       </div>
 
@@ -25,7 +25,7 @@ const CommentContainer = props => {
           />
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

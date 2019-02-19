@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./CommentContainer.css";
 const Comment = props => {
   console.log("These are props in Comment", props);
   return (
