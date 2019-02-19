@@ -14,7 +14,11 @@ const PostContainer = props => {
             thumbnailUrl={item.thumbnailUrl}
           />
           <Post imageUrl={item.imageUrl} />
-          <CommentContainer comments={item.comments} />
+          <CommentContainer
+            comments={item.comments}
+            likes={item.likes}
+            timestamp={item.timeStamp}
+          />
         </div>
       ))}
     </>
