@@ -1,7 +1,7 @@
 import React from "react";
 import CameraLogo from "../../assets/camera-logo.svg";
 import IGLogo from "../../assets/iglogo.png";
-import Heart from "../../assets/heart.svg";
+// import Heart from "../../assets/heart.svg";
 
 // import Navbar from "react-bootstrap/Navbar";
 // import Form from "react-bootstrap/Form";
@@ -32,7 +32,9 @@ const SearchBar = props => {
       />
 
       <div className="left-logos">
-        <img src={Heart} alt="Heart" className="heart" />
+        <i className="far fa-circle" />
+        <i className="far fa-heart" />
+        {/* <img src={Heart} alt="Heart" className="heart" /> */}
         <i className="far fa-user" />
       </div>
     </div>
