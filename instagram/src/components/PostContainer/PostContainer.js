@@ -1,32 +1,21 @@
 import React from "react";
-import PostHeader from "./PostHeader";
 import Post from "./Post";
-import CommentContainer from "../CommentSection/CommentContainer";
-
 /* 
-dataArray is a list of Post objects
-We map through our list of Post objects and for each one, create a Comment Container
-In our comment container we pass through our item 
+Post Container is a child component of App.js. In App.js we passed down state,an array of post objects, via props.
 
-<PostContainer
-dataArray={this.state.dataArray}
-addComment={this.addComment}
+Posts is a list of Post objects
 
-postArray
+We map through our list of Post objects and for each one, create a Post
+In our Post we pass in our post data, i.e each object's data.
 /> */
 
 const PostContainer = props => {
-  console.log("These are props in PostContainer", props);
+  // console.log("These are props in PostContainer", props);
   return (
     <>
-      {props.dataArray.map(item => (
-        <div key={item.username} className="post-container">
-          <PostHeader
-            username={item.username}
-            thumbnailUrl={item.thumbnailUrl}
-          />
-          <Post imageUrl={item.imageUrl} />
-          <CommentContainer item={item} />
+      {props.posts.map(post => (
+        <div key={post.username} className="post-container">
+          <Post key={post.imageUrl} post={post} />
         </div>
       ))}
     </>

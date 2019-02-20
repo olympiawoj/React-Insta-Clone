@@ -9,35 +9,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataArray: dummyData
+      posts: []
+      //posts is an array of Post objects
     };
   }
-
-  //add comment method adds comment to the comments array, which is a property on our PostObj.
-
-  addComment = (e, item) => {
-    e.preventDefault();
-    console.log(item);
-    //let instead of const
-    let newCommentItem = {
-      username: "test-user",
-      text: item
-    };
-
-    this.setState({ dataArray: [...this.state.dataArray, newCommentItem] });
-  };
+  componentDidMount() {
+    this.setState({
+      posts: dummyData //:characters
+    });
+  }
 
   render() {
     return (
       <div className="app">
         <div className="search-bar">
-          <SearchBar dataArray={this.state.dataArray} />
+          <SearchBar />
         </div>
         <div className="post-container">
-          <PostContainer
-            dataArray={this.state.dataArray}
-            addComment={this.addComment}
-          />
+          <PostContainer posts={this.state.posts} />
         </div>
       </div>
     );
