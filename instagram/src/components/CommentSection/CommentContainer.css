@@ -14,3 +14,11 @@ p {
   /* border: 1px solid red; */
   margin-bottom: 10px;
 }
+
+input {
+  width: 100%;
+  /* border-style: solid; */
+  /* border: none;
+  border-top: 0.1px solid lightgrey; */
+  padding-top: 15px;
+}

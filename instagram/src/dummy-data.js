@@ -1,3 +1,6 @@
+//dummyData holds an ARRAY of objects.
+//We are managing our dummyData array inside STATE!
+
 const dummyData = [
   {
     username: "philzcoffee",
