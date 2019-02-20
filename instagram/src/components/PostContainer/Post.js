@@ -17,21 +17,3 @@ const Post = props => {
 };
 
 export default Post;
-
-/* <i className="far fa-heart" />
-        <i className="far fa-comment" />
-        <p classname="likes">
-          <strong>{props.item.likes} likes</strong>
-        </p>
-        <div>
-          {this.dataArray.comments.map(item => (
-            <Comment className="comment" key={item.text} commentObj={item} />
-          ))}
-        </div>
-
-        <div>
-          <CommentInput
-            addComment={this.addComment}
-            commentObj={props.item.comments}
-          />
-        </div> */

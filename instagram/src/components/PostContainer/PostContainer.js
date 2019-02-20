@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+
 /* 
 Post Container is a child component of App.js. In App.js we passed down state,an array of post objects, via props.
 

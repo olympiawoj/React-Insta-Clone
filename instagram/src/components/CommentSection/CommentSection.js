@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
     this.state = {
       commentInput: "",
       comments: props.post.comments,
-      post: props.post
+      post: props.post,
+      likes: props.post.likes
     };
   }
 
@@ -27,18 +28,21 @@ class CommentSection extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  // submitComment = event => {
-  //   event.preventDefault();
-  //   this.addNewComment(event, this.state.commentInput);
-  // };
+  incrementLikes = () => {
+    console.log("we are incrementing");
+    let likes = this.state.likes + 1;
+    this.setState({ likes: likes });
+  };
 
   render() {
     return (
       <div className="comment-container">
-        <i className="far fa-heart comment-icons" />
+        <button onClick={this.incrementLikes}>
+          <i className="far fa-heart comment-icons" />
+        </button>
         <i className="far fa-comment comment-icons" />
         <p classname="likes">
-          <strong>{this.state.post.likes} likes</strong>
+          <strong>{this.state.likes} likes</strong>
         </p>
         <div>
           {this.state.comments.map(comment => (

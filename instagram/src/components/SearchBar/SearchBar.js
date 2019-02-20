@@ -1,13 +1,6 @@
 import React from "react";
 import CameraLogo from "../../assets/camera-logo.svg";
 import IGLogo from "../../assets/iglogo.png";
-// import Heart from "../../assets/heart.svg";
-
-// import Navbar from "react-bootstrap/Navbar";
-// import Form from "react-bootstrap/Form";
-// import FormControl from "react-bootstrap/FormControl";
-// import Container from "react-bootstrap/Container";
-// import InputGroup from "react-bootstrap/InputGroup";
 
 import "./SearchBar.css";
 
