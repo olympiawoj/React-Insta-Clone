@@ -32,10 +32,12 @@ const SearchBar = props => {
         </div>
 
         <input
+          id
           className="searchForm input-group"
           name=""
           type="text"
           placeholder="   Search"
+          onKeyDown={props.searchPosts}
         />
       </div>
 
