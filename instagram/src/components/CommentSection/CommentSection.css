@@ -1,9 +1,11 @@
 .comment-container {
-  border: 0.1px solid lightgrey;
+  border: 1px solid lightgrey;
   padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-i {
+.comment-icons {
   margin-right: 10px;
   font-size: 1.3rem;
 }
@@ -15,10 +17,17 @@ p {
   margin-bottom: 10px;
 }
 
-input {
+.commentForm {
+  display: flex;
+  border-top: 1px solid lightgrey;
+}
+
+#form-input {
   width: 100%;
-  /* border-style: solid; */
-  /* border: none;
-  border-top: 0.1px solid lightgrey; */
+  border: none;
   padding-top: 15px;
+}
+
+button {
+  border: none;
 }

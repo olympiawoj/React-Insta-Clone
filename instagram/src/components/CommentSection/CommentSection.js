@@ -35,8 +35,8 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-container">
-        <i className="far fa-heart" />
-        <i className="far fa-comment" />
+        <i className="far fa-heart comment-icons" />
+        <i className="far fa-comment comment-icons" />
         <p classname="likes">
           <strong>{this.state.post.likes} likes</strong>
         </p>

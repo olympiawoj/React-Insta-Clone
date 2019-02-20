@@ -1,10 +1,10 @@
-.searchBar-container {
+#searchBar-container {
   width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   padding: 15px;
-  border: 0.5px solid lightgrey;
+  border: 1px solid lightgrey;
 }
 
 .right-logos {
@@ -50,4 +50,5 @@
 .searchForm {
   width: 260px;
   height: 35px;
+  padding: 15px;
 }

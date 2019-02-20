@@ -13,7 +13,7 @@ import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <div className="searchBar-container">
+    <div id="searchBar-container">
       <div className="right-logos">
         <img
           src={CameraLogo}
