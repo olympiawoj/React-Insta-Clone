@@ -2,15 +2,15 @@ import React from "react";
 
 const CommentInput = props => {
   return (
-    <form onSubmit={this.submitComment}>
+    <form onSubmit={props.addNewComment}>
       <input
         type="text"
         name="commentInput"
         placeholder="  Add a comment..."
-        value={this.state.commentInput}
-        onChange={this.handleChanges}
+        value={props.commentInput}
+        onChange={props.handleChanges}
       />
-      <button onClick={this.submitComment}>
+      <button onClick={props.addNewComment}>
         <i className="fas fa-ellipsis-h" />
       </button>
     </form>

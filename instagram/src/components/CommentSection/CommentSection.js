@@ -2,8 +2,6 @@ import React from "react";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 
-//Our comment section component holds our
-
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -14,21 +12,25 @@ class CommentSection extends React.Component {
     };
   }
 
+  addNewComment = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        { username: "olympia-wojcik", text: this.state.commentInput }
+      ],
+      commentInput: ""
+    });
+  };
+
   handleChanges = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  addNewComment = (event, item) => {
-    event.PreventDefault();
-    console.log(item);
-
-    const newComment = {
-      username: "test-username",
-      text: item
-    };
-
-    this.setState({ comments: [...this.state.comments], newComment });
-  };
+  // submitComment = event => {
+  //   event.preventDefault();
+  //   this.addNewComment(event, this.state.commentInput);
+  // };
 
   render() {
     return (
@@ -50,7 +52,8 @@ class CommentSection extends React.Component {
 
         <div>
           <CommentInput
-            addComment={this.addNewComment}
+            handleChanges={this.handleChanges}
+            addNewComment={this.addNewComment}
             comments={this.state.comments}
             commentInput={this.state.commentInput}
           />
