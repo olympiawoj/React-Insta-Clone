@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
-
+import withAuthenticate from "./components/Authentication/withAuthenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
+
+import "./App.css";
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <PostsPage />
+        <ComponentFromWithAuthenticate />
       </div>
     );
   }
