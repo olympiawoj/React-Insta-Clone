@@ -11,17 +11,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      showFirst: false
+      // loggedIn: false,
+      inputText: ""
     };
   }
 
-  toggleComponents = () => this.setState({ showFirst: !this.state.showFirst });
+  // toggleComponents = () => this.setState({ loggedIn: !this.state.loggedIn });
+
+  handleChanges = event => this.setState({ inputText: event.target.value });
+
+  signIn = event => {
+    event.preventDefault();
+    localStorage.setItem("user", this.state.inputText);
+    window.location.reload();
+  };
 
   render() {
     return (
       <div className="app">
-        <ComponentFromWithAuthenticate showFirst={this.state.showFirst} />
-        <button onClick={this.toggleComponents}>Toggle me</button>
+        <ComponentFromWithAuthenticate
+          inputText={this.state.inputText}
+          handleChanges={this.handleChanges}
+          signIn={this.signIn}
+        />
+        {/* <button onClick={this.signIn}>Toggle me</button> */}
       </div>
     );
   }

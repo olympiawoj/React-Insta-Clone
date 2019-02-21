@@ -4,10 +4,16 @@ import React from "react";
 //The c
 
 const withAuthenticate = PostsPage => Login => props => {
-  if (props.showFirst) {
+  if (localStorage.getItem("user")) {
     return <PostsPage />;
   }
-  return <Login />;
+  return (
+    <Login
+      inputText={props.inputText}
+      handleChanges={props.handleChanges}
+      signIn={props.signIn}
+    />
+  );
 };
 
 export default withAuthenticate;
