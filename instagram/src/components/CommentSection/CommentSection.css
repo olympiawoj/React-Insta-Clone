@@ -38,3 +38,9 @@ p {
 button:focus {
   outline: none;
 }
+
+.time {
+  font-size: 11px;
+  color: grey;
+  font-weight: bold;
+}

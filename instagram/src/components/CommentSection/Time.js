@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import "./CommentSection.css";
 
 class Time extends React.Component {
   constructor(props) {
@@ -9,13 +10,11 @@ class Time extends React.Component {
     };
   }
   render() {
-    let march = moment(
-      this.state.dateTime,
-      "MMMM Do YYYY, hh:mm:ss a"
-    ).fromNow();
+    let march = moment(this.state.dateTime, "MMMM Do YYYY, hh:mm:ss a")
+      .fromNow()
+      .toUpperCase();
 
-    console.log(march);
-    return <div> {march} </div>;
+    return <p className="time"> {march} </p>;
   }
 }
 export default Time;
