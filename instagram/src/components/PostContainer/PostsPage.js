@@ -14,6 +14,7 @@ class PostsPage extends Component {
       //posts is an array of Post objects
     };
   }
+
   componentDidMount() {
     this.setState({
       posts: dummyData //:characters

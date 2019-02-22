@@ -1,6 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
+import Time from "./Time";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -92,6 +93,7 @@ class CommentSection extends React.Component {
             />
           ))}
         </div>
+        <Time post={this.state.post} />
 
         <div>
           <CommentInput
