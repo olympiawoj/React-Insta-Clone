@@ -13,11 +13,9 @@ const Wrapper = styled.div`
   flex-direction: row;
   width: 350px;
   height: 355px;
-  border: 1px solid lightgrey;
   justify-content: center;
   align-items: center;
-  align-content: space-around;
-  background-color: white;
+  margin-top: 200px;
 
   ${props =>
     props.primary &&
@@ -25,7 +23,11 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       width: 350px;
-      height: 354px;
+      height: 360px;
+      background-color: white;
+      border: 1px solid lightgrey;
+      margin-left: 20px;
+      border-radius: 5px;
     `}
 `;
 
@@ -49,12 +51,13 @@ const Image = styled.img`
     props.primary &&
     css`
       width: 370px;
-      height: auto;
+      height: 570px;
     `}
 `;
 
 const Input = styled.input`
   width: 266px;
+  margin-bottom: 5px;
 `;
 
 const Login = props => {
@@ -69,6 +72,12 @@ const Login = props => {
             value={props.inputText}
             onChange={props.handleChanges}
             placeholder=" Username"
+          />
+          <Input
+            type="text"
+            // value={props.inputText}
+            // onChange={props.handleChanges}
+            placeholder=" Password"
           />
           <Button onClick={props.signIn}>Log In</Button>
         </Wrapper>

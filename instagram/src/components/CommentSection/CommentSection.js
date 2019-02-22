@@ -9,7 +9,9 @@ class CommentSection extends React.Component {
       commentInput: "",
       comments: props.post.comments,
       post: props.post,
-      likes: props.post.likes
+      likes: props.post.likes,
+      heartColor: "black",
+      heartIcon: "far fa-heart comment-icons"
     };
   }
 
@@ -34,11 +36,20 @@ class CommentSection extends React.Component {
     this.setState({ likes: likes });
   };
 
+  handleLikeClick = () => {
+    this.setState({ heartColor: "#F04855" });
+    this.setState({ heartIcon: "fas fa-heart comment-icons" });
+  };
+
   render() {
     return (
       <div className="comment-container">
         <button onClick={this.incrementLikes}>
-          <i className="far fa-heart comment-icons" />
+          <i
+            className={this.state.heartIcon}
+            style={{ color: this.state.heartColor }}
+            onClick={this.handleLikeClick}
+          />
         </button>
         <i className="far fa-comment comment-icons" />
         <p classname="likes">
