@@ -74,7 +74,7 @@ const Login = props => {
             placeholder=" Username"
           />
           <Input
-            type="text"
+            type="password"
             // value={props.inputText}
             // onChange={props.handleChanges}
             placeholder=" Password"
