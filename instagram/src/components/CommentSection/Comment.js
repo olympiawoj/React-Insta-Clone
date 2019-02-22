@@ -4,7 +4,7 @@ import "./CommentSection.css";
 // import PropTypes from "prop-types";
 
 const Comment = props => {
-  console.log("These are props in Comment", props);
+  // console.log("These are props in Comment", props);
   return (
     <div className="comments-section">
       <p>

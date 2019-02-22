@@ -16,6 +16,16 @@ class CommentSection extends React.Component {
     };
   }
 
+  //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+  deleteComments = event => {
+    let lastComment = this.state.comments.pop();
+    if (lastComment.username === "olympia-wojcik") {
+      event.preventDefault();
+      this.setState({ comments: [...this.state.comments] });
+    }
+  };
+
   addNewComment = event => {
     event.preventDefault();
     this.setState({
@@ -89,6 +99,7 @@ class CommentSection extends React.Component {
             addNewComment={this.addNewComment}
             comments={this.state.comments}
             commentInput={this.state.commentInput}
+            deleteComments={this.deleteComments}
           />
         </div>
       </div>

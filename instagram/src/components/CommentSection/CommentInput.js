@@ -2,19 +2,21 @@ import React from "react";
 
 const CommentInput = props => {
   return (
-    <form className="commentForm" onSubmit={props.addNewComment}>
-      <input
-        id="form-input"
-        type="text"
-        name="commentInput"
-        placeholder="  Add a comment..."
-        value={props.commentInput}
-        onChange={props.handleChanges}
-      />
-      <button onClick={props.addNewComment}>
+    <div className="commentForm">
+      <form onSubmit={props.addNewComment}>
+        <input
+          id="form-input"
+          type="text"
+          name="commentInput"
+          placeholder="  Add a comment..."
+          value={props.commentInput}
+          onChange={props.handleChanges}
+        />
+      </form>
+      <button onClick={props.deleteComments}>
         <i className="fas fa-ellipsis-h" />
       </button>
-    </form>
+    </div>
   );
 };
 

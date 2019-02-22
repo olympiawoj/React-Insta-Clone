@@ -6,6 +6,10 @@
   background-color: white;
 }
 
+button {
+  border: none;
+}
+
 .comment-icons {
   margin-right: 10px;
   font-size: 1.3rem;
@@ -21,16 +25,14 @@ p {
 .commentForm {
   display: flex;
   border-top: 1px solid lightgrey;
+  /* border: 5px dashed orange; */
 }
 
 #form-input {
-  width: 100%;
+  width: 500px;
   border: none;
   padding-top: 15px;
-}
-
-button {
-  border: none;
+  /* border: 2px dashed green; */
 }
 
 button:focus {
