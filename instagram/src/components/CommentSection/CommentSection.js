@@ -11,7 +11,8 @@ class CommentSection extends React.Component {
       post: props.post,
       likes: props.post.likes,
       heartColor: "black",
-      heartIcon: "far fa-heart comment-icons"
+      heartIcon: "far fa-heart comment-icons",
+      showLikeClick: false
     };
   }
 
@@ -36,19 +37,36 @@ class CommentSection extends React.Component {
     this.setState({ likes: likes });
   };
 
+  decrementLikes = () => {
+    let likes = this.state.likes - 1;
+    this.setState({ likes });
+  };
+
   handleLikeClick = () => {
-    this.setState({ heartColor: "#F04855" });
-    this.setState({ heartIcon: "fas fa-heart comment-icons" });
+    if (!this.state.showLikeClick) {
+      this.setState({ heartColor: "#F04855" });
+      this.setState({ heartIcon: "fas fa-heart comment-icons" });
+      this.incrementLikes();
+    } else {
+      this.setState({ heartColor: "black" });
+      this.setState({ heartIcon: "far fa-heart comment-icons" });
+      this.decrementLikes();
+    }
+  };
+
+  toggleLike = () => {
+    this.setState({ showLikeClick: !this.state.showLikeClick });
+    this.handleLikeClick();
   };
 
   render() {
     return (
       <div className="comment-container">
-        <button onClick={this.incrementLikes}>
+        <button onClick={this.toggleLike}>
           <i
             className={this.state.heartIcon}
             style={{ color: this.state.heartColor }}
-            onClick={this.handleLikeClick}
+            onClick={this.toggleLike}
           />
         </button>
         <i className="far fa-comment comment-icons" />
