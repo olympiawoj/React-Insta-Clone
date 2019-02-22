@@ -42,6 +42,7 @@ const Login = props => {
         type="text"
         value={props.inputText}
         onChange={props.handleChanges}
+        placeholder="username@gmail.com"
       />
       <Button onClick={props.signIn}>Log In</Button>
     </Wrapper>
