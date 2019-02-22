@@ -1,0 +1,37 @@
+.comment-container {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.comment-icons {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 1.2;
+  font-size: 14px;
+  /* border: 1px solid red; */
+  margin-bottom: 10px;
+}
+
+.commentForm {
+  display: flex;
+  border-top: 1px solid lightgrey;
+}
+
+#form-input {
+  width: 100%;
+  border: none;
+  padding-top: 15px;
+}
+
+button {
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}

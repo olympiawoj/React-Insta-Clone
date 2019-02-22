@@ -1,0 +1,54 @@
+#searchBar-container {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid lightgrey;
+}
+
+.right-logos {
+  width: 33.3333%;
+}
+
+.left-logos {
+  width: 33.3333%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px;
+}
+
+.left-logos i {
+  font-size: 1.5rem;
+  margin-right: 40px;
+}
+
+.cameraLogo {
+  width: 35px;
+  height: auto;
+  margin: 15px;
+}
+
+.instagramLogo {
+  width: 146px;
+  height: auto;
+}
+
+.heart {
+  width: 25px;
+  height: auto;
+}
+
+.input-group {
+  width: 33.33%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+}
+
+.searchForm {
+  width: 260px;
+  height: 35px;
+  padding: 15px;
+}
